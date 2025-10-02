@@ -42,6 +42,11 @@ def load_saved_artifacts():
     print("Loading saved artifacts...done")
 
 
+def get_location_names():
+    """Return all known locations from mapping file"""
+    if __loc_means is None:
+        load_saved_artifacts()
+    return sorted(list(__loc_means.keys()))
 def get_estimated_price(location, sqft, bhk, bath):
     """Build feature row and return estimated price in lakhs"""
     if __model is None or __columns is None:

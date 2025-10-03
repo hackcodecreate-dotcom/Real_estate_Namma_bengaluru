@@ -4,6 +4,11 @@ import numpy as np
 import pandas as pd
 from huggingface_hub import hf_hub_download
 
+# Constants for Hugging Face model
+REPO_ID = "hackcodecreate-dotcom/Real_estate_Namma_bengaluru"
+MODEL_FILENAME = "bengaluru_house_price_model.pkl"
+MODEL_PATH = "./artifacts/bengaluru_house_price_model.pkl"
+
 # Globals
 __model       = None
 __columns     = None
